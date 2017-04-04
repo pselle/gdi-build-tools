@@ -84,7 +84,8 @@
 					<aside class="notes">
 						We have all levels in this class, and so we start from the beginning and presume little knowledge.
 						Basic programming knowledge is going to be helpful, but what you'll learn will help you know what to
-						go learn more about.
+						go learn more about. Furthermore, no question is dumb AND you help me out if you ask for clarification.
+						If you go beyond the scope of the class, I'll let you know!
 					</aside>
 				</section>
 
@@ -269,11 +270,33 @@ gulp.task('default', function() {
 				</section>
 
 				<section>
-					<h2>Webpack</h2>
+					<h2>Useful things!</h2>
+					<ul>
+						<li>Linters - ESLint</li>
+						<li>Compilers - Babel, compression, etc.</li>
+						<li>Sourcemaps</li>
+						<li>Watch</li>
+					</ul>
+					<aside class="notes">There is a more complex gulp example in class-files to check out! If extra time, walk through these.</aside>
 				</section>
 
 				<section>
-					<h2>More on Webpack</h2>
+					<h2>Webpack</h2>
+					<p><a href="https://webpack.js.org/">webpack.js.org</a></p>
+					<p>Webpack is a module bundler for web applications.</p>
+					<img src="images/webpack.gif"/>
+				</section>
+
+				<section>
+					<h2>Webpack: Simple</h2>
+					<p>Webpack is <em>smart</em> it understands lots of module definitions (CommonJS, AMD, ES 6 modules, etc.) and puts things together</p>
+					<aside class="notes">Open webpack example and show how it can create bundle.js file rather than multiple tags</aside>
+				</section>
+
+				<section>
+					<h2>More Webpack: Loaders &amp; Plugins</h2>
+					<p>Loaders are how webpack understands files - how you can 'require()' a CSS file, or an image file, even!</p>
+					<p>Plugins perform actions on "compilations" or "chunks" of bundled code, vs. on a per file basis like a loader</p>
 				</section>
 
 				<section>
