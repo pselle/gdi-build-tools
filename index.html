@@ -58,7 +58,7 @@
 					<h2>Is your machine ready to go?</h2>
 					<ul>
 						<li>Node.js and npm installed</li>
-						<small>Please ask a TA to help you check if you aren't sure!</small>
+						<small>Please ask a TA to help you check if you aren't sure! Node 6+ please!</small>
 						<li>Your favorite text editor ready to go</li>
 						<small>I use Atom, but we often recommend Sublime Text</small>
 					</ul>
@@ -78,7 +78,7 @@
 					<ul>
 						<li>Scaffolding</li>
 						<li>Old school build tooling (make)</li>
-						<li>Dependency management</li>
+						<li>Dependency management with npm</li>
 						<li>JS build tools: gulp and webpack</li>
 					</ul>
 					<aside class="notes">
@@ -146,7 +146,7 @@ $ yo [choose a generator]
 
 				<section>
 					<h2>Makefile sample</h2>
-<pre><code>all: clean build
+<pre><code class="bash">all: clean build
 
 clean:
 	rm -rf foo
@@ -155,37 +155,83 @@ build:
 	mkdir foo && cd foo && touch index.html
 </code></pre>
 
-        <section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-					<p>P.S. This won't work when running the slides locally unless you run reveal.js from a local web server (<a href="https://github.com/girldevelopit/gdi-slides-template/wiki#compiling-slides-and-running-locally" target="_blank">learn how</a>).</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+				<aside class="notes">Each word with a colon can be run as a command with make. "all" is what runs by default.
+					What makes Make cool and revolutionary as build tooling is it's smart: it does the minimum amount of work
+				  necessary based on what changed. In our simple example, this won't happen, but for compiling, it's A+</aside>
 				</section>
 
 				<section>
-					  <h2>But wait! We teach code</h2>
-					  <p>We can also make code editable</p>
-<pre><code contenteditable class="xml">&lt;ul class="demo"&gt;
-  &lt;li&gt;No order here&lt;/li&gt;
-  &lt;li&gt;Or here&lt;/li&gt;
-  &lt;li&gt;Or here&lt;/li&gt;
-  &lt;li&gt;Or here&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
+					<h2>Let's Develop It!</h2>
+					<p>Try making a Makefile using the sample code. You can also download <a href="https://pselle.github.io/gdi-build-tools/class-examples/make-example/Makefile">from github.</a></p>
+					<aside class="notes">Only a few minutes for this one, I'll walk through up front in case getting this cobbled together is difficult</aside>
 				</section>
 
 				<section>
-					  <h2>But wait! We teach code</h2>
-					  <p>Javascript</p>
-<pre><code contenteditable class ="javascript">function helloWorld(){
-  var name = 'GDI';
-  alert("Hi, " + name)
+					<h2>Dependency management</h2>
+					<div><img src="images/blocks.jpg" /></div>
+					<small>Photo via Flickr user Steven Depolo</small>
+					<aside class="notes">Programming nowadays is putting blocks together well. Dependency management is how we make sure we
+						get the blocks we meant to, every time.</aside>
+				</section>
+
+				<section>
+					<h2>npm - Node Package Manager</h2>
+					<p>"npm is the package manager for JavaScript and the world’s largest software registry" - <a href="https://www.npmjs.com/">npmjs.com</a></p>
+					<p><a href="https://yarnpkg.com/en/">Yarn</a> is an alternative to npm, and many of the commands map. It's fast and has some strong benefits.</p>
+					<h3>Let's Develop It!</h3>
+					<p>Create a new directory and run "npm init"</p>
+					<aside class="notes">Yarn is interesting and I'm happy to talk more about it after class, but since we all have npm installed, we're using that!
+						Because yarn has general API parity with npm, anything you learn here is useful with that.</aside>
+				</section>
+
+				<section>
+					<h2>package.json</h2>
+<pre><code class="json">{
+  "name": "intro-to-build-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GDI Philly",
+  "license": "MIT"
 }
 </code></pre>
+				</section>
+
+				<section>
+					<h2>Adding dependencies</h2>
+					<p>Use npm to install a package AND save it to our dependencies!</p>
+<pre><code class="bash">$ npm install --save dinosaur-fetcher</code></pre>
+					<small>Tip! You can also use -S instead of --save!</small>
+					<aside class="notes">Brief walkthrough: run this install command, show node_modules folder,
+						rm -rf, and run npm install to show it generates same folders</aside>
+				</section>
+
+				<section>
+					<h2>Let's Develop It!</h2>
+					<ul>
+						<li>Install the dinosaur fetcher module in your node project</li>
+						<li>Create index.js and fill it in with the code below</li>
+					</ul>
+<pre><code class="javascript">const dino = require('dinosaur-fetcher');
+
+console.log(dino.random());</code></pre>
+				</section>
+
+				<section>
+					<h2>Scripts?? Let's scripts!!</h2>
+					<p>The "scripts" section of package.json can be any word, and you can run with "npm run [word]"</p>
+					<p>Some words have default behaviors, such as "start" and "install", and <a href="https://docs.npmjs.com/misc/scripts">npm
+						has lots of details on that</a>.</p>
+					<p>Edit package.json to look like:</p>
+<pre><code>  "scripts": {
+    "test": "echo \"No tests yet!\"",
+    "start": "node index.js"
+  },</code></pre>
+					<p>And run "npm start"</p>
+					<small>For a challenge, use a new word (ex. "build") and have it run any bash command! Don't forget "npm run"!</small>
 				</section>
 
 				<section>
