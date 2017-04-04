@@ -22,3 +22,7 @@ Students should have basic familiarity with JavaScript, such as GDI's Intro to J
 - Project scaffolding (aka, making starting projects a breeze!)
 - Build tool basics, including "make"
 - JavaScript build tools, including gulp and webpack
+
+### Credits
+
+Material inspired by [GDI Roc's course](https://github.com/gdiroc/gdi-build-tools).
