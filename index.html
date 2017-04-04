@@ -235,6 +235,53 @@ console.log(dino.random());</code></pre>
 				</section>
 
 				<section>
+					<h2>JavaScript Built Tools!</h2>
+					<p>We'll talk about two today:</p>
+					<ul>
+						<li>Gulp</li>
+						<li>Webpack</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Gulp</h2>
+					<p><a href="http://gulpjs.com/">gulpjs.com</a></p>
+					<div><img src="images/cars.jpg"/></div>
+					<small>Photo via Flickr user Alden Jewell</small>
+					<aside class="notes">Pass files through the processes that need to occur. How do you make a car on the assembly line?</aside>
+				</section>
+
+				<section>
+					<h2>Let's Develop It!</h2>
+					<ul>
+						<li>Install gulp as a dependency using npm</li>
+						<li>Create a "gulpfile.js" file in the project we used with npm</li>
+						<li>BONUS: Add a "script" task to run gulp (will demo in front)</li>
+						<li>BONUS: Where is gulp in package.json if you install as a developer dependency (-D vs. -S)?</li>
+					</ul>
+<pre><code class="javascript">var gulp = require('gulp');
+
+gulp.task('default', function() {
+  gulp.src('./*.js')
+    .pipe(gulp.dest('dist'));
+});</code></pre>
+					<aside class="notes">Walk through what is happening in the gulp file. What's a task? What's source? What's pipe?</aside>
+				</section>
+
+				<section>
+					<h2>Webpack</h2>
+				</section>
+
+				<section>
+					<h2>More on Webpack</h2>
+				</section>
+
+				<section>
+					<h2>Let's Develop It!</h2>
+					- webpack
+				</section>
+
+				<section>
 					<h1>Thank you!</h1>
 					<h4>Don't forget to fill out the survey!</h4>
 				</section>

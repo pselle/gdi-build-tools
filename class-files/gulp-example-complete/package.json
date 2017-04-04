@@ -1,0 +1,17 @@
+{
+  "name": "gulp-example-complete",
+  "version": "1.0.0",
+  "description": "Installing and running dinosaur fetcher!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests yet!\"",
+    "start": "node index.js",
+    "build": "gulp"
+  },
+  "author": "GDI",
+  "license": "MIT",
+  "dependencies": {
+    "dinosaur-fetcher": "^1.1.4",
+    "gulp": "^3.9.1"
+  }
+}
