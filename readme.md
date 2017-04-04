@@ -1,49 +1,24 @@
-> Please read our slide creation guidelines in [the wiki](https://github.com/girldevelopit/gdi-slides-template/wiki). Then, delete this banner and add the specifics about your class below.
+# Intro to Build Tools
 
-# Add Your Course Title Here
-
-Slides and materials are hosted at [http://github.io/your_username_here/your_repository_name_here](http://github.io/your_username_here/your_repository_name_here).
+Slides and materials are hosted at [http://github.io/pselle/gdi-build-tools](http://github.io/pselle/gdi-build-tools).
 
 ## Course description
 
-Use this space for a short description of your course. We recommend using the description from your meetup event.
-
-**Cost:** 
-
-**Dates:** 
-
-**Location:** 
-
-A limited number of scholarships are available for those with a financial hardship. To apply, contact us at...
-
+Being a developer is exciting! But every workflow includes some repetitive tasks that can get you out of your groove. Have you ever thought "there's got to be a better way!"? Well there is! In this workshop we'll go over the basics of build tools, how they can improve both your development flow and the experience for your users, and how to solve some of the most common problems. This class follows a lecture/lab structure.  
 
 ### Prerequisites:
 
-List any prerequisites for this class, including any previous classes or the equivalent self-study or real-world skills.
-
-You should have:
-
-(a) taken Intro or Intermediate HTML/CSS through Girl Develop It, or
-
-(b) built and managed websites on your own,
-
-**And also:**
-
-(a) taken intro to JavaScript through Girl Develop It, or
-
-(b) be familiar with syntax, arrays, conditionals, for and while loops, event handling, jQuery, AJAX requests, and handling JSON responses.
-
+Students should have basic familiarity with JavaScript, such as GDI's Intro to JavaScript course. Some familiarity with the command-line will also be helpful.
 
 ### Tech requirements:
 
- - Your laptop (Mac, PC, or Linux are all okay).
- - A modern web browser - either Chrome or Firefox with Firebug installed.
- - A text editor. We recommend Sublime Text 2 (free; available for Mac, PC, and Linux).
-
+ - Your laptop
+ - NodeJS and npm installed
+ - A text editor
 
 ### Topics covered:
 
- - The topics you plan to cover
- - Written in list form
- - Here's another one
-
+- npm, yarn & dependency management
+- Project scaffolding (aka, making starting projects a breeze!)
+- Build tool basics, including "make"
+- JavaScript build tools, including gulp and webpack
