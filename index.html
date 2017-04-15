@@ -155,10 +155,18 @@ clean:
 build:
 	mkdir foo && cd foo && touch index.html
 </code></pre>
-
-				<aside class="notes">Each word with a colon can be run as a command with make. "all" is what runs by default.
-					What makes Make cool and revolutionary as build tooling is it's smart: it does the minimum amount of work
-				  necessary based on what changed. In our simple example, this won't happen, but for compiling, it's A+</aside>
+				</section>
+				<section>
+					<h2>Make is great!</h2>
+					<ul>
+						<li>Every "word:" can be run as a command</li>
+						<li>"all" runs by default when you run "make"</li>
+						<li>Add as many commands as you want</li>
+						<li>Make is smart! Runs what is necessary based on what changed</li>
+					</ul>
+					<aside class="notes">Each word with a colon can be run as a command with make. "all" is what runs by default.
+						What makes Make cool and revolutionary as build tooling is it's smart: it does the minimum amount of work
+						necessary based on what changed. In our simple example, this won't happen, but for compiling, it's A+</aside>
 				</section>
 
 				<section>
@@ -253,12 +261,11 @@ console.log(dino.random());</code></pre>
 				</section>
 
 				<section>
-					<h2>Let's Develop It!</h2>
+					<h2>Gulp</h2>
 					<ul>
-						<li>Install gulp as a dependency using npm</li>
-						<li>Create a "gulpfile.js" file in the project we used with npm</li>
-						<li>BONUS: Add a "script" task to run gulp (will demo in front)</li>
-						<li>BONUS: Where is gulp in package.json if you install as a developer dependency (-D vs. -S)?</li>
+						<li>Define tasks</li>
+						<li>Define sources</li>
+						<li>"Pipe" sources through processes</li>
 					</ul>
 <pre><code class="javascript">var gulp = require('gulp');
 
@@ -270,13 +277,30 @@ gulp.task('default', function() {
 				</section>
 
 				<section>
-					<h2>Useful things!</h2>
+					<h2>Things we could add to our builds!</h2>
 					<ul>
-						<li>Linters - ESLint</li>
-						<li>Compilers - Babel, compression, etc.</li>
-						<li>Sourcemaps</li>
-						<li>Watch</li>
+						<li>Linters - <a href="http://eslint.org/">ESLint</a></li>
+						<li>Compilers - <a href="https://babeljs.io/">Babel</a>, compression, etc.</li>
+						<li>Source maps - point a compressed line of code to its original line number</li>
+						<li>Watch - automatically refresh our page when we changed a file</li>
 					</ul>
+				</section>
+
+				<section>
+					<h2>Let's Develop It!</h2>
+					<ul>
+						<li>Install gulp as a dependency using npm</li>
+						<li>Create a "gulpfile.js" file in the project we used with npm</li>
+						<li>BONUS: Add a "script" task to run gulp (will demo in front)</li>
+						<li>BONUS: Where is gulp in package.json if you install as a developer dependency (-D vs. -S)?</li>
+						<li>BONUS: Add <a href="https://www.npmjs.com/package/gulp-watch">gulp-watch</a> to your project</li>
+					</ul>
+<pre><code class="javascript">var gulp = require('gulp');
+
+gulp.task('default', function() {
+  gulp.src('./*.js')
+    .pipe(gulp.dest('dist'));
+});</code></pre>
 				</section>
 
 				<section>
