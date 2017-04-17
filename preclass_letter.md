@@ -1,6 +1,6 @@
 Hello GDI'ers!
 
-I'm excited to see you all [date] for some awesome Node.js goodness, but before that, here are a few handy reminders!
+I'm excited to see you all [date] for some awesome build tools goodness, but before that, here are a few handy reminders!
 
 **Bring:**
 
