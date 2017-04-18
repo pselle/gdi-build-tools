@@ -345,7 +345,15 @@ gulp.task('default', function() {
 
 				<section>
 					<h2>Webpack: Simple</h2>
-					<p>Webpack is <em>smart</em>. It understands lots of module definitions (CommonJS, AMD, ES 6 modules, etc.) and puts things together</p>
+					<p>Webpack is <em>smart</em>. It understands lots of module definitions (CommonJS, AMD, ES 6 modules, etc.) and puts things together.</p>
+<pre><code class="js">// webpack.config.js
+module.exports = {
+  entry: './index.js',
+  output: {
+    filename: 'bundle.js'
+  }
+}
+</code></pre>
 					<aside class="notes">Open webpack example and show how it can create bundle.js file rather than multiple tags</aside>
 				</section>
 
