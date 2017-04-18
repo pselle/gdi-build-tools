@@ -384,6 +384,71 @@ module.exports = {
 				</section>
 
 				<section>
+					<h2>Loaders</h2>
+					<p>We can use a CSS Loader to require CSS in our JS!</p>
+					<p>This is useful in, ex. modular components</p>
+<pre><code class="js">const path = require('path');
+module.exports = {
+  entry: './index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css/,
+        loaders: ['style-loader', 'css-loader'],
+        include: __dirname + '/css'
+      }
+    ]
+  }
+};
+
+</code></pre>
+				</section>
+
+				<section>
+					<h2>Including CSS in our JS</h2>
+
+<pre><code class="js">import { coolStuff } from './coolStuff';
+import styles from './css/coolStyles.css';
+import mainStyles from './css/styles.css';
+
+document.write(`<h2 class="coolness">MOAR COOL STUFF ${coolStuff}!</h2>`);
+</code></pre>
+				<aside class="notes">But when we do this, we get style tags. Show in built file. A plugin can help us use a bundled CSS instead!</aside>
+				</section>
+
+				<section>
+					<h2>Using a plugin instead</h2>
+<pre><code class="js">const path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+module.exports = {
+  entry: './index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css/,
+        loader: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
+      }
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin("styles.css")
+  ]
+};</code></pre>
+				</section>
+
+				<section>
 					<h2>Let's Develop It!</h2>
 					<p>Try making a basic webpack configuration on your own!</p>
 					<aside class="notes">This is where we're ending class, feel free to work on this now, or go back to a previous exercise</aside>
