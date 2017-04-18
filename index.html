@@ -172,6 +172,14 @@ build:
 				<section>
 					<h2>Let's Develop It!</h2>
 					<p>Try making a Makefile using the sample code. You can also download <a href="https://pselle.github.io/gdi-build-tools/class-files/make-example/Makefile">from github.</a></p>
+<pre><code class="bash">all: clean build
+
+clean:
+	rm -rf foo
+
+build:
+	mkdir foo && cd foo && touch index.html
+</code></pre>
 					<aside class="notes">Only a few minutes for this one, I'll walk through up front in case getting this cobbled together is difficult</aside>
 				</section>
 
