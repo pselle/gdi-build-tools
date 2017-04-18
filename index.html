@@ -365,11 +365,19 @@ module.exports = {
 						<li>Loaders</li>
 						<li>Plugins</li>
 					</ul>
+<pre><code class="js">// webpack.config.js
+module.exports = {
+  entry: './index.js', // Entry!
+  output: { // Output!
+    filename: 'bundle.js'
+  }
+}
+</code></pre>
 					<p>Note: the <a href="https://webpack.js.org/concepts/">Webpack 2 documentation has a great overview of these!</a></p>
 				</section>
 
 				<section>
-					<h2>More Webpack: Loaders &amp; Plugins</h2>
+					<h2>Loaders &amp; Plugins</h2>
 					<p>Loaders are how webpack understands files - how you can 'require()' a CSS file, or an image file, even!</p>
 					<p>Plugins perform actions on "compilations" or "chunks" of bundled code, vs. on a per file basis like a loader</p>
 					<aside class="notes">There is a more complex webpack example that shows loaders and plugin usage</aside>
