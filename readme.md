@@ -1,6 +1,6 @@
 # Intro to Build Tools
 
-Slides and materials are hosted at [http://github.io/pselle/gdi-build-tools](http://github.io/pselle/gdi-build-tools).
+Slides and materials are hosted at [https://pselle.github.io/gdi-build-tools/](https://pselle.github.io/gdi-build-tools/).
 
 ## Course description
 
